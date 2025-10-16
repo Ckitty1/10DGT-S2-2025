@@ -32,8 +32,10 @@ while keep_going == 1:
     # printing responses depending on the answer
     if like_coffee == "yes" or like_coffee == "Yes" or like_coffee =="Y" or like_coffee == "y":
         print("Why would you like coffee, it's unnatural")
+        keep_going = 0
     elif like_coffee == "no" or like_coffee == "No" or like_coffee == "N" or like_coffee == "n":
         print("That's good, you're natural")
+        keep_going = 0
     else:
         print('You need to answer with either "yes" or "no".')
     
