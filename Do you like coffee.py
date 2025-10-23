@@ -43,42 +43,46 @@ while keep_going == 1:
     print()
 '''
 
-# Version 2.0
+# Version 2.1
 # Making the program more pythonic
 
-keep_going = ""
+def coffee_program():
+    keep_going = ""
 
-while keep_going == "":
+    while keep_going == "":
 
-    # making the answer as lowercase
-    like_coffee = input("Do you like coffee? \n").lower()
+        # making the answer as lowercase
+        like_coffee = input("Do you like coffee? \n").lower()
 
-    if like_coffee == "yes" or like_coffee == "y":
-        print("Why would you like coffee, it's unnatural")
-    
-    elif like_coffee == "no" or like_coffee == "n":
-        print("That's good, you're natural\n")
+        if like_coffee == "yes" or like_coffee == "y":
+            print("Why would you like coffee, it's unnatural")
         
+        elif like_coffee == "no" or like_coffee == "n":
+            print("That's good, you're natural\n")
+            
 
-        like_tea = input("Well, do you like tea then? \n").upper()
+            like_tea = input("Well, do you like tea then? \n").upper()
 
-        if like_tea == "YES" or like_tea == "Y":
-            print("\nGood job, tea is more healthy than coffee")
-            keep_going = 0
-
-        elif like_tea == "NO" or like_tea == "N":
-            print("\nSo what do you drink??")
-
-
-            like_water = input("Do you like water?\n").upper()
-
-            if like_water == "YES" or like_water == "Y":
-                print("\nEh, I guess water is okay")
+            if like_tea == "YES" or like_tea == "Y":
+                print("\nGood job, tea is more healthy than coffee")
                 keep_going = 0
 
-            elif like_water == "NO" or like_water == "N":
-                print("\nWow, you just don't drink anything")
-                keep_going = 0
+            elif like_tea == "NO" or like_tea == "N":
+                print("\nSo what do you drink??")
+
+
+                like_water = input("Do you like water?\n").upper()
+
+                if like_water == "YES" or like_water == "Y":
+                    print("\nEh, I guess water is okay")
+                    keep_going = 0
+
+                elif like_water == "NO" or like_water == "N":
+                    print("\nWow, you just don't drink anything")
+                    keep_going = 0
+
+                else:
+                    print('You need to answer with either "yes" or "no".')
 
             else:
                 print('You need to answer with either "yes" or "no".')
@@ -86,13 +90,11 @@ while keep_going == "":
         else:
             print('You need to answer with either "yes" or "no".')
 
-    else:
-        print('You need to answer with either "yes" or "no".')
+        keep_going = input("\nPress <ENTER> to keep going/restart, otherwise press any other key to exit.")
 
-    keep_going = input("\nPress <ENTER> to keep going/restart, otherwise press any other key to exit.")
+        # creating new line for user interface purposes
+        print()
 
-    # creating new line for user interface purposes
-    print()
-
-
-
+# Running the program
+if __name__ == "__main__":
+    coffee_program()
